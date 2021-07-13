@@ -1,0 +1,140 @@
+ <!--================Register Area =================-->
+ <section class="register_area p_100">
+  <div class="container">
+      <div class="register_inner">
+          <div class="row">
+              <div class="col-lg-7">
+                  <div class="billing_details" novalidate>
+                      <h2 class="reg_title">Billing Detail</h2>
+                      <form class="billing_inner row" [formGroup]="registerForm">
+                          <div class="col-lg-12">
+                              <div class="form-group">
+                                  <label for="name">First Name <span>*</span></label>
+                                  <input formControlName="nom_complet" name="nom_complet" type="text" class="form-control" id="name" aria-describedby="name" placeholder="" required>
+                              </div>
+                          </div>
+                          <div class="col-lg-12">
+                              <div class="form-group">
+                                  <label for="last">Last Name <span>*</span></label>
+                                  <input formControlName="username" name="username" type="text" class="form-control" id="last" aria-describedby="last" required>
+                              </div>
+                          </div>
+                          <div class="col-lg-12">
+                            <div class="form-group">
+                                <label for="email">Email <span>*</span></label>
+                                <input formControlName="email" name="email" type="email" class="form-control" id="email" aria-describedby="email" required>
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="form-group">
+                                <label for="phone">Phone <span>*</span></label>
+                                <input formControlName="telephone" name="telephone" type="text" class="form-control" id="phone" aria-describedby="phone" required>
+                            </div>
+                        </div>
+                          <div class="col-lg-12">
+                              <div class="form-group">
+                                  <label for="address">Address <span>*</span></label>
+                                  <input formControlName="adresse" name="adresse" type="text" class="form-control" id="address" aria-describedby="address" required>
+                              </div>
+                          </div>
+                          <div class="col-lg-12">
+                            <div class="form-group">
+                                <label for="cun">Country <span>*</span></label>
+                                <select formControlName="pays" name="pays" class="selectpicker" id="cun" required>
+                                    <option>United State America (USA)</option>
+                                    <option>Bangladesh (BAN)</option>
+                                    <option>United State America (USA)</option>
+                                </select>
+                            </div>
+                        </div>
+                          <div class="col-lg-12">
+                              <div class="form-group">
+                                  <label for="ctown">City / Town <span>*</span></label>
+                                  <select formControlName="ville" name="ville" class="selectpicker" id="ctown" required>
+                                      <option>United State America (USA)</option>
+                                      <option>Bangladesh (BAN)</option>
+                                      <option>United State America (USA)</option>
+                                  </select>
+                              </div>
+                          </div>
+                      </form>
+                  </div>
+              </div>
+              <div class="col-lg-5">
+                  <div class="order_box_price">
+                      <h2 class="reg_title">Your Order</h2>
+                      <div class="payment_list">
+                          <div class="price_single_cost">
+                              <h5>Mens Casual Shirt <span>$25.20</span></h5>
+                              <h5>Mens Casual Shirt <span>$25.20</span></h5>
+                              <h4>Cart Subtotal <span>$50.00</span></h4>
+                              <h3><span class="normal_text">Order Totals</span> <span>$50.00</span></h3>
+                          </div>
+                          <div id="accordion" role="tablist" class="price_method">
+                              <div class="card">
+                                  <div class="card-header" role="tab" id="headingOne">
+                                      <h5 class="mb-0">
+                                          <a data-toggle="collapse" href="#collapseOne" role="button" aria-expanded="true" aria-controls="collapseOne">
+                                          direct bank transfer
+                                          </a>
+                                      </h5>
+                                  </div>
+
+                                  <div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion">
+                                      <div class="card-body">
+                                          Lorem Ipsum is simply dummy text of the print-ing and typesetting industry. Lorem Ipsum has been the industry's.
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="card">
+                                  <div class="card-header" role="tab" id="headingTwo">
+                                      <h5 class="mb-0">
+                                          <a class="collapsed" data-toggle="collapse" href="#collapseTwo" role="button" aria-expanded="false" aria-controls="collapseTwo">
+                                          cheque payment
+                                          </a>
+                                      </h5>
+                                  </div>
+                                  <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo" data-parent="#accordion">
+                                      <div class="card-body">
+                                          Lorem Ipsum is simply dummy text of the print-ing and typesetting industry. Lorem Ipsum has been the industry's.
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="card">
+                                  <div class="card-header" role="tab" id="headingThree">
+                                      <h5 class="mb-0">
+                                          <a class="collapsed" data-toggle="collapse" href="#collapseThree" role="button" aria-expanded="false" aria-controls="collapseThree">
+                                          cash on delivery
+                                          </a>
+                                      </h5>
+                                  </div>
+                                  <div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree" data-parent="#accordion">
+                                      <div class="card-body">
+                                          Lorem Ipsum is simply dummy text of the print-ing and typesetting industry. Lorem Ipsum has been the industry's.
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="card">
+                                  <div class="card-header" role="tab" id="headingfour">
+                                      <h5 class="mb-0">
+                                          <a class="collapsed" data-toggle="collapse" href="#collapsefour" role="button" aria-expanded="false" aria-controls="collapsefour">
+                                          paypal
+                                          </a>
+                                      </h5>
+                                  </div>
+                                  <div id="collapsefour" class="collapse" role="tabpanel" aria-labelledby="headingfour" data-parent="#accordion">
+                                      <div class="card-body">
+                                          Lorem Ipsum is simply dummy text of the print-ing and typesetting industry. Lorem Ipsum has been the industry's.
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <button (click)="onSubmit()" type="submit" value="submit" class="btn subs_btn form-control">place order</button>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+<!--================End Register Area =================-->

@@ -1,0 +1,74 @@
+<section>
+  
+<ngb-carousel #carousel [interval]="2000" [pauseOnHover]="pauseOnHover" [pauseOnFocus]="pauseOnFocus" (slide)="onSlide($event)">
+  <!--
+  <ng-template ngbSlide *ngFor="let img of images; index as i">
+  -->
+  <ng-template ngbSlide *ngFor="let produit of produits; index as i">
+    <!--
+    <div class="carousel-caption">
+      <h3>My slide {{i + 1}} title</h3>
+    </div>
+    -->
+    <a  target="_blank" rel="nofollow noopener noreferrer">
+      <!--
+      <div class="picsum-img-wrapper">
+        <img [src]="img" alt="My image {{i + 1}} description">
+      </div>
+      -->
+      <!--================End Related Product Area =================-->
+      <section class="related_product_area">
+        <div class="container">
+            <div class="related_product_inner">
+                <h2 class="single_c_title"></h2>
+                <div class="row">
+                    <div class="col-lg-4 col-sm-6" *ngFor="let produit of produits">
+                        <div class="l_product_item">
+                            <div class="l_p_img">
+                                <img class="img-fluid" src="{{ 'http://ecomapi.tdigitale.com/img/products_images/' + produit.image1 }}" alt="">
+                            </div>
+                            <div class="l_p_text">
+                               <ul>
+                                    <li class="p_icon"><a href="#"><i class="icon_piechart"></i></a></li>
+                                    <li><a class="add_cart_btn" href="#" (click)="addTocart(produit)" (click)="$event.preventDefault()">Add To Cart</a></li>
+                                    <li class="p_icon"><a href="#"><i class="icon_heart_alt"></i></a></li>
+                                </ul>
+                                <h4>{{produit.nom_produit}}</h4>
+                                <h5>${{produit.prix}}</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    <!--================End Related Product Area =================-->
+    </a>
+  </ng-template>
+</ngb-carousel>
+
+<hr>
+<!---
+<div class="form-check">
+  <input type="checkbox" class="form-check-input" id="pauseOnHover" [(ngModel)]="pauseOnHover">
+  <label class="form-check-label" for="pauseOnHover">Pause on hover</label>
+</div>
+<div class="form-check">
+  <input type="checkbox" class="form-check-input" id="pauseOnFocus" [(ngModel)]="pauseOnFocus">
+  <label class="form-check-label" for="pauseOnFocus">Pause on focus</label>
+</div>
+<div class="form-check">
+  <input type="checkbox" class="form-check-input" id="unpauseOnArrow" [(ngModel)]="unpauseOnArrow">
+  <label class="form-check-label" for="unpauseOnArrow">Unpause when clicking on arrows</label>
+</div>
+<div class="form-check">
+  <input type="checkbox" class="form-check-input" id="pauseOnIndicator" [(ngModel)]="pauseOnIndicator">
+  <label class="form-check-label" for="pauseOnIndicator">Pause when clicking on navigation indicator</label>
+</div>
+<button type="button" (click)="togglePaused()" class="btn btn-outline-dark btn-sm">
+  {{paused ? 'Cycle' : 'Pause' }}
+</button>
+-->
+
+</section>
